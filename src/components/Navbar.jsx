@@ -1,33 +1,38 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// 070D1F
 function Navbar() {
     return (
         <>
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <Link class="navbar-brand" to="/">Navbar</Link>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{backgroundColor:"#124076"}}>
+                <div className="container-fluid" >
+                    <Link className="navbar-brand" to="/" style={{color:"#E6E7E9"}}>SensorSphere</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                    <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+                        <ul className="navbar-nav  mb-2 mb-lg-0 ">
+                            <li className="nav-item Navbar-link">
+                                <Link className="nav-link active" aria-current="page" to="/" style={{color:"#E6E7E9"}}>Home</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="product">Products</Link>
+                            <li className="nav-item Navbar-link">
+                                <Link className="nav-link" to="product" style={{color:"#E6E7E9"}}>Products</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="faq">FAQ's</Link>
+                            <li className="nav-item Navbar-link">
+                                <Link className="nav-link" to="faq" style={{color:"#E6E7E9"}}>FAQ's</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="about">About Us</Link>
+                            <li className="nav-item Navbar-link">
+                                <Link className="nav-link" to="about" style={{color:"#E6E7E9"}}>About Us</Link>
                             </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="contact">Contact Us</Link>
+                            <li className="nav-item Navbar-link">
+                                <Link className="nav-link" to="contact" style={{color:"#E6E7E9"}}>Contact Us</Link>
                             </li>
                         </ul>
+                    </div>
+                    <div className='d-flex gap-2'>
+                        <button type="button" className="btn btn-primary">Login</button>
+                        <button type="button" className="btn btn-primary">SignUp</button>
                     </div>
                 </div>
             </nav>
