@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 
-// 070D1F
+
 function Navbar() {
     return (
         <>
@@ -40,4 +40,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default memo(Navbar)

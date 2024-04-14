@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function Carousel() {
     return (
@@ -61,4 +61,4 @@ function Carousel() {
     )
 }
 
-export default Carousel
+export default memo(Carousel)

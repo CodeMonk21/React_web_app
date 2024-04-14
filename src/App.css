@@ -7,3 +7,21 @@
 .Navbar-link:hover{
   background-color: #378CE7;
 }
+.Footer-reserved{
+  background-color:#0e2e52 ;
+}
+.Footer-body{
+  background-color:#124076 ;
+  color: whitesmoke;
+}
+.Footer-body img{
+  height: 80px;
+}
+.Footer-body ul{
+  list-style: none;
+}
+.Footer-body li{
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+

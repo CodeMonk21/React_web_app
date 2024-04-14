@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function ProductCard(props) {
   return (
@@ -15,11 +15,11 @@ function ProductCard(props) {
             {props.data?.price} 
               <span className='fw-light text-decoration-line-through'> {props.data?.xprice}</span> 
               <span className='text-success'> {props.data?.off}</span></h5>
-            <a href="#" className="btn btn-primary">Explore More</a>
+            <a href="" className="btn btn-primary">Explore More</a>
           </div>
       </div>
     </>
   )
 }
 
-export default ProductCard
+export default memo(ProductCard)
