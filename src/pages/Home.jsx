@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Carousel from '../components/Carousel'
 import ProductCard from '../components/ProductCard'
 import CardDataJson from "../CardData.json"
 
 function Home() {
-
-  console.log(CardDataJson);
   return (
     <>
       <div style={{ backgroundColor: "whitesmoke" }}>
@@ -25,10 +23,9 @@ function Home() {
             }
           </div>
         </div>
-
       </div>
     </>
   )
 }
 
-export default Home
+export default memo(Home)

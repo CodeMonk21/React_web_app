@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function About() {
+
+  console.log("About page render");
   return (
     <>
       <div className='py-4 d-flex flex-column align-items-center' style={{ backgroundColor: "whitesmoke" }}>
@@ -69,4 +71,4 @@ function About() {
   )
 }
 
-export default About
+export default memo( About)

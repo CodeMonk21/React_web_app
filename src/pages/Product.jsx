@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import ProductCard from '../components/ProductCard'
 import CardDataJson from "../CardData.json"
 
@@ -6,7 +6,7 @@ function Product() {
   const [searchInput, setSearchInput] = useState("")
   const [productArr, setProductArr] = useState([])
 
-
+  
   const handleSearch = (e)=> setSearchInput(e.target.value)
   
   useEffect(()=>{
@@ -39,4 +39,4 @@ function Product() {
   )
 }
 
-export default Product
+export default memo(Product)

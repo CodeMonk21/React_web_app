@@ -2,6 +2,7 @@ import React from 'react'
 import Accordion from '../components/Accordion'
 
 function Faq() {
+  console.log("faq render");
   const faqData = [
     {
       title: "Exporting Content and Publishing",

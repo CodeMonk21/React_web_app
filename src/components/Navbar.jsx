@@ -25,14 +25,16 @@ function Navbar() {
                             <li className="nav-item Navbar-link">
                                 <Link className="nav-link" to="faq" style={{ color: "#E6E7E9" }}>FAQ's</Link>
                             </li>
-                            <li className="nav-item Navbar-link">
-                                <Link className="nav-link" to="contact" style={{ color: "#E6E7E9" }}>Contact Us</Link>
-                            </li>
                         </ul>
                     </div>
                     <div className='d-flex gap-2'>
-                        <button type="button" className="btn btn-primary">Login</button>
-                        <button type="button" className="btn btn-primary">SignUp</button>
+                        <Link to="login">
+                            <button type="button" className="btn btn-primary"> Login</button>
+                        </Link>
+                        <Link to="signup">
+                            <button type="button" className="btn btn-primary">SignUp</button>
+
+                        </Link>
                     </div>
                 </div>
             </nav>
