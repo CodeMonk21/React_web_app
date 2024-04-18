@@ -1,17 +1,18 @@
 import React from 'react'
 
 function Accordion(props) {
+   const targetId = String(props.index)
     return (
         <>
-            <div class="accordion" id="accordionExample" style={{border:"none"}}>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            <span className='fs-4 fw-bold'>{props.data?.question}</span>
+            <div className="px-3 py-4" id="accordionExample" style={{border:"none", borderBottom:"1px solid" }}>
+                <div className="accordion-item" style={{backgroundColor:"whitesmoke"}}>
+                    <h2 className="accordion-header" id="headingOne">
+                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#abcd"+targetId}>
+                            <span className='fs-4 '>{props.data?.title}</span>
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                    <div id={"abcd"+targetId} className="py-4 accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div className="accordion-body fs-5">
                         {props.data?.desc}
                         </div>
                     </div>

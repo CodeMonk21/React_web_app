@@ -4,13 +4,26 @@ import Accordion from '../components/Accordion'
 function Faq() {
   const faqData = [
     {
-      question: "Exporting Content and Publishing",
+      title: "Exporting Content and Publishing",
       desc: "You can easily export content and publish it using our platform. Our system allows you to export sensor data and reports in various formats such as CSV, Excel, and PDF for easy integration and sharing. Additionally, our user-friendly interface enables you to publish and share sensor data and reports directly to your desired platforms or systems."
     },
     {
-      question:"Getting started with SensorSphere",
+      title:"Getting started with SensorSphere",
       desc:"Welcome to SensorSphere! To begin, choose and order the sensors that best suit your needs. Once you receive them, follow the provided installation instructions to set them up. After installation, connect your sensors to our platform for real-time data monitoring. For any assistance or detailed guidance, please refer to our user manual or contact our customer support. We're here to help make your experience with SensorSphere seamless and enjoyable!"
-    }
+    },
+    {
+      title:"How can I Get More Content Credit",
+      desc:"To gain more content credit, focus on producing high-quality, original content consistently, engage with your audience and community, promote your content through social media and SEO, network with influencers and industry experts, and continuously improve your skills and knowledge. Additionally, consider guest posting on reputable websites, participating in content platforms that offer credit to contributors, and building a professional portfolio to showcase your expertise."
+    },
+    {
+      title:"I wish to Cancel My Subscription",
+      desc:"We're sorry to hear that you wish to cancel your subscription. To cancel your subscription, please log in to your account on our platform and navigate to the 'Subscription' or 'Account Settings' section to find the option to cancel. Alternatively, you can contact our customer support team, and they will assist you with the cancellation process. Please note that depending on your subscription terms, there might be a cancellation fee or specific cancellation period. For any further questions or concerns, feel free to reach out to our customer support."
+    },
+    {
+      title:"Requesting Revisions",
+      desc:"If you need to request revisions or have any concerns regarding your sensors or the data they provide, please reach out to our customer support team. We are committed to ensuring your satisfaction and will work with you to address any issues and make the necessary revisions to meet your requirements. You can contact our support team through the platform, email, or phone, and we will assist you promptly."
+    },
+    
   ]
   return (
     <>
@@ -34,16 +47,14 @@ function Faq() {
             <h4> Can I Trust a Sensors Site?</h4>
             <p>Absolutely, you can trust our Sensor sites. We are committed to providing high-quality, reliable sensors that meet industry standards and regulations. Our sensors undergo rigorous testing to ensure their accuracy and durability. Additionally, we prioritize the security and privacy of our customers' data, implementing robust encryption and security measures to protect your information. Customer satisfaction is our top priority, and we strive to provide excellent customer service and support.</p>
           </div>
-          <div className='pb-4'>
+          <div className='pb-5'>
             {
               faqData.map((data,index)=>{
                 return(
-                  <Accordion key={index}  data={data} />
+                  <Accordion key={index} index={index}  data={data} />
                 )
               })
             }
-            {/* <Accordion data={faqData[0]} /> */}
-
           </div>
         </div>
       </div>
