@@ -3,13 +3,11 @@ import ProductCard from '../components/ProductCard'
 import CardDataJson from "../CardData.json"
 
 function Product() {
-  const [searchInput, setsearchInput] = useState("")
+  const [searchInput, setSearchInput] = useState("")
   const [productArr, setProductArr] = useState([])
 
 
-  const handleSearch = (e)=>{
-    setsearchInput(e.target.value)
-  }
+  const handleSearch = (e)=> setSearchInput(e.target.value)
   
   useEffect(()=>{
     setProductArr(CardDataJson)
@@ -33,11 +31,9 @@ function Product() {
               return (
                 <ProductCard key={index} data={data} />
               )
-
             })
           }
         </div>
-
       </div>
     </>
   )
