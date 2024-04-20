@@ -60,3 +60,9 @@
   font-weight: 500;
 }
 
+.Login-container{
+  background-image: url("../public/assets/carousel_img7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

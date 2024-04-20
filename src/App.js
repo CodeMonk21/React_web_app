@@ -8,11 +8,21 @@ import Product from './pages/Product';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [loggedUser, setLoggedUser] = useState({})
+
+  useEffect(()=>{
+    if(localStorage.getItem("SensorLogin")){
+      setLoggedUser(JSON.parse(localStorage.getItem("SensorLogin")))
+    }
+  },[])
+
   return (
     <>
-      <Navbar />
+      <Navbar loggedUser={loggedUser} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />

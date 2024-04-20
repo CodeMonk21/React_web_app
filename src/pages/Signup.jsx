@@ -6,7 +6,7 @@ function Signup() {
     const navigate = useNavigate()
     const navigateToLogin = () => {
         setTimeout(() => {
-            navigate("login")
+            navigate("/login")
         }, 2000)
     }
 
@@ -109,7 +109,7 @@ function Signup() {
                             </div>
                         </div>
                         <button type="submit" className="Form-btn my-3" onClick={handleSignUp}>Sign up</button>
-                        <p className='text-center text-white'>Already have an Account? <Link to="login" className='fs-5 text-info text-decoration-none'>Login</Link> </p>
+                        <p className='text-center text-white'>Already have an Account? <Link to="/login" className='fs-5 text-info text-decoration-none'>Login</Link> </p>
 
                     </div>
                 </div>
