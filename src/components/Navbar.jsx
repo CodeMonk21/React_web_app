@@ -2,16 +2,25 @@ import React, { memo, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-function Navbar({ loggedUser }) {
+function Navbar() {
 
+    //Use states 
+    const [loggedUser, setLoggedUser] = useState(false)
     const [showUser, setShowUser] = useState(false)
 
+    //Logout user
+    const logoutUser = ()=>{
+        localStorage.removeItem("SensorLogin")
+        setShowUser(false)
+    }
+
     useEffect(() => {
-        if (loggedUser) {
+        if (localStorage.getItem("SensorLogin")) {
             setShowUser(true)
+            setLoggedUser(JSON.parse(localStorage.getItem("SensorLogin")))
         }
     }, [])
-
+    
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ backgroundColor: "#124076" }}>
@@ -37,14 +46,22 @@ function Navbar({ loggedUser }) {
                         </ul>
                     </div>
                     {
-                        showUser
+                        showUser == true
                         &&
-                        <button type="button fs-5 text-white" className="btn">
-                            <span className='text-white'>Hello {loggedUser.email}</span> 
-                        </button>
+                        <div className="dropdown" style={{marginRight:"100px"}}>
+                            <button type="button fs-5 text-white" className="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span className='text-white'>Hello {loggedUser.name}</span>
+                            </button>
+                            <ul className="dropdown-menu">
+                                <li><button className='dropdown-item' onClick={logoutUser}>Logout</button></li>
+                                <li><hr className="dropdown-divider" /></li>
+                                <li><span className="dropdown-item">Something else here</span></li>
+                            </ul>
+                        </div>
+
                     }
                     {
-                        !showUser
+                        showUser == false
                         &&
                         <div className='d-flex gap-2'>
                             <Link to="login">

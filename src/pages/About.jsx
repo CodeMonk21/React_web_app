@@ -1,8 +1,7 @@
 import React, { memo } from 'react'
 
 function About() {
-
-  console.log("About page render");
+  
   return (
     <>
       <div className='py-4 d-flex flex-column align-items-center' style={{ backgroundColor: "whitesmoke" }}>
